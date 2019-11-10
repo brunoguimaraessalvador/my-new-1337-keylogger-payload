@@ -49,17 +49,13 @@ CodeStart:
 	mov ebx,[ebp+24]
 	call ebx
 	mov [ebp+32] , eax
-	xor ecx,ecx
-mov ecx,[fs:ecx] ;Eax=???
-add ecx,18h
-mov ecx,[ecx]
-MOV [EBP+68h],ECX
+
 MOV DWORD[EBP+60],0
 LEA EBX,[ebp+60]
 PUSH EBX
 PUSH 0
 PUSH 0
-LEA EBX,[0E2h+ECX]
+MOV EBX,004010D4h
 PUSH EBX
 PUSH 0
 MOV DWORD[ebp+84],0
